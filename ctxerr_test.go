@@ -1,9 +1,9 @@
 package ctxerr
 
 import (
-	"testing"
 	"errors"
 	"github.com/stretchr/testify/assert"
+	"testing"
 )
 
 func TestCommonUsage(t *testing.T) {
