@@ -47,7 +47,11 @@ func (e Error) GetField(key string) interface{} {
 //Error to implement standard error interface
 //Consider including fields here as well
 func (e Error) Error() string {
-	return e.err.Error()
+	err := e.err.Error()
+	for key, value := range e.fields {
+		err = err + fmt.Sprintf("\n[%v - %v]", key, value)
+	}
+	return err
 }
 
 //Unwrap to be able to get original error
