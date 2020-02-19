@@ -1,5 +1,7 @@
 package ctxerr
 
+import "fmt"
+
 //Fields similar to logrus.Fields for entry
 type Fields map[string]interface{}
 
